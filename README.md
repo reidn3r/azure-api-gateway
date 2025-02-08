@@ -17,7 +17,7 @@ Este projeto consiste em um encurtador de URLs baseado em Java, utilizando tecno
 
 ## Arquitetura
 <p align="center">
-    <img src="assets/azure-url-shortener.drawio.png" alt="Software Architecture">
+    <img src="_assets/azure-url-shortener.drawio.png" alt="Software Architecture">
 </p>
 
 - Gateway: Conteiner Docker (ACR)
@@ -69,7 +69,7 @@ POST /create
 }
 ```
 <p align="center">
-    <img src="assets/create-req.png" alt="Software Architecture">
+    <img src="_assets/create-req.png" alt="Software Architecture">
 </p>
 
 ---
@@ -88,7 +88,7 @@ GET http://scg-encurtador.brazilsouth.azurecontainer.io/{destinyUrl}
 
 ### Usando client HTTP, obtém o html da página de destino 
 <p align="center">
-    <img src="assets/redirect-req.png" alt="Software Architecture">
+    <img src="_assets/redirect-req.png" alt="Software Architecture">
 </p>
 
 ### Usando o link no browser, o redirecionamento acontece.
