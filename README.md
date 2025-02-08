@@ -35,7 +35,7 @@ Este projeto consiste em um encurtador de URLs baseado em Java, utilizando tecno
 
 ---
 
-## Endpoint do API Gateway
+## Endpoint do API Gateway (Momentâneamente offline)
 Todas as requisições podem ser enviadas para o seguinte endpoint (atenção ao protocolo **http**):
 
 ```
