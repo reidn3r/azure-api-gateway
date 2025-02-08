@@ -68,6 +68,9 @@ POST /create
   "expiresDate": "2025-02-08T00:00:00.0000"
 }
 ```
+<p align="center">
+    <img src="assets/create-req.png" alt="Software Architecture">
+</p>
 
 ---
 
@@ -81,6 +84,14 @@ GET http://scg-encurtador.brazilsouth.azurecontainer.io/{destinyUrl}
   - `GET http://scg-encurtador.brazilsouth.azurecontainer.io/abc123`
   - Se a URL ainda for válida, o usuário será redirecionado para a **URL original**.
   - Caso tenha expirado, retornará um erro informando a expiração do link.
+
+
+### Usando client HTTP, obtém o html da página de destino 
+<p align="center">
+    <img src="assets/redirect-req.png" alt="Software Architecture">
+</p>
+
+### Usando o link no browser, o redirecionamento acontece.
 
 ---
 
