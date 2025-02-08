@@ -1,4 +1,9 @@
-# URL Shortener Backend - Java + Azure + Spring Cloud Gateway
+<h1 align="center">
+    URL Shortener Backend
+</h1>
+<h3 align="center">
+    Java + Azure + Spring Cloud Gateway
+</h3>
 
 ## Visão Geral
 Este projeto consiste em um encurtador de URLs baseado em Java, utilizando tecnologias escaláveis. O sistema é composto por:
