@@ -17,7 +17,7 @@ Este projeto consiste em um encurtador de URLs baseado em Java, utilizando tecno
 
 ## Arquitetura
 <p align="center">
-    <img src="_assets/azure-url-shortener.drawio.png" alt="Software Architecture">
+    <img src="_assets/azure-url-shortener.jpg" alt="Software Architecture">
 </p>
 
 - Gateway: Conteiner Docker (ACR)
