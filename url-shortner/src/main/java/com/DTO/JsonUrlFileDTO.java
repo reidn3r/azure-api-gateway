@@ -12,8 +12,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class JsonUrlFileDTO {
-    private String sourceURL;
-    private String destinyUrl;
-    private LocalDateTime expiresDate;
-
+	private String sourceURL;
+	private String destinyUrl;
+	private LocalDateTime expiresDate;
 }

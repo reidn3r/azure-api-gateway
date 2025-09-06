@@ -12,6 +12,6 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ExceptionDTO {
-    private String message;
-    private HttpStatus status;
+  private String message;
+  private HttpStatus status;
 }

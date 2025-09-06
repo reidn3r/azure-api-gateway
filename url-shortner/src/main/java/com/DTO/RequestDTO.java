@@ -11,14 +11,13 @@ import lombok.Setter;
 @Getter
 @Setter
 public class RequestDTO {
+  @NotNull
+  @NotBlank
+  @URL
+  private String url;
 
-    @NotNull
-    @NotBlank
-    @URL
-    private String url;
-
-    @NotNull
-    @Positive
-    private int expiresIn;
-
+  @NotNull
+  @Positive
+  private int expiresIn;
 }
+
