@@ -5,13 +5,13 @@
     Java + Azure + Spring Cloud Gateway
 </h3>
 
-## 🧭 Visão Geral
+## Visão Geral
 
 Este projeto é um **encurtador de URLs**, construído com Java e infraestrutura serverless da Azure. Ele permite criar links curtos com expiração e redirecionar usuários de forma segura e eficiente — tudo armazenado em **Azure Blob Storage**.
 
 ---
 
-## 🏗️ Arquitetura
+## Arquitetura
 
 <p align="center">
     <img src="_assets/azure-url-shortener.jpg" alt="Arquitetura do Sistema URL Shortener" width="80%">
@@ -24,12 +24,12 @@ Este projeto é um **encurtador de URLs**, construído com Java e infraestrutura
 | **Redirecionamento**     | Azure Function (Java)  | Serverless               |
 | **Armazenamento**        | Azure Blob Storage     | Serverless (Blob JSON)   |
 
-> 🌐 **Endpoint do Gateway (temporariamente offline):**  
+> **Endpoint do Gateway (temporariamente offline):**  
 > `http://scg-encurtador.brazilsouth.azurecontainer.io`
 
 ---
 
-## 🚀 Como Usar
+## Como Usar
 
 ### 1️⃣ Criar uma URL Encurtada
 
@@ -76,8 +76,8 @@ GET http://scg-encurtador.brazilsouth.azurecontainer.io/abc123
 
 ❌ Se expirada → Retorna erro JSON com mensagem de erro
 
-> 🖥️ **No navegador:** Redirecionamento automático  
-> 🧪 **Via client HTTP:** Recebe o HTML da página de destino
+> **No navegador:** Redirecionamento automático  
+> **Via client HTTP:** Recebe o HTML da página de destino
 
 <p align="center">
     <img src="_assets/redirect-req.png" alt="Exemplo de redirecionamento" width="90%">
@@ -85,7 +85,7 @@ GET http://scg-encurtador.brazilsouth.azurecontainer.io/abc123
 
 ---
 
-## 💾 Armazenamento no Azure Blob Storage
+## Armazenamento no Azure Blob Storage
 
 Cada URL encurtada gera um **arquivo `.json`** no Blob Storage com a estrutura:
 
@@ -97,12 +97,12 @@ Cada URL encurtada gera um **arquivo `.json`** no Blob Storage com a estrutura:
 }
 ```
 
-📁 **Container padrão:** `url-temp-file`  
-🔑 **Nome do blob:** `{destinyUrl}.json`
+**Container padrão:** `url-temp-file`  
+**Nome do blob:** `{destinyUrl}.json`
 
 ---
 
-## 🔍 Validação de Entrada
+## Validação de Entrada
 
 A classe `RequestDTO` garante a integridade dos dados recebidos:
 
@@ -125,7 +125,7 @@ public class RequestDTO {
 
 ---
 
-## 🐳 Implantação do API Gateway (Spring Cloud Gateway)
+## Implantação do API Gateway (Spring Cloud Gateway)
 
 ### Passo a passo para publicar no Azure Container Registry (ACR)
 
@@ -136,4 +136,4 @@ public class RequestDTO {
 | 3. Push para ACR | `docker push <NOME_ACR>.azurecr.io/url-shortener-gateway:latest` |
 | 4. Deploy no ACI | `az container create --resource-group <RG> --name gateway --image <NOME_ACR>.azurecr.io/url-shortener-gateway:latest --cpu 1 --memory 1 --registry-login-server <NOME_ACR>.azurecr.io --dns-name-label scg-encurtador --os-type Linux --ports 80` |
 
-> ⚙️ Substitua `<NOME_ACR>` e `<RG>` pelos valores reais do seu ambiente Azure.
+> Substitua `<NOME_ACR>` e `<RG>` pelos valores reais do seu ambiente Azure.
